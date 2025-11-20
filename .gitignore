@@ -1,0 +1,22 @@
+# Virtual Environment
+venv/
+env/
+.env
+
+# Data and Results
+data/
+results/
+
+
+# Python compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Models (Optional: Uncomment if you want to exclude trained models)
+# models_v2_7/
+
+# OS generated files
+.DS_Store
+Thumbs.db

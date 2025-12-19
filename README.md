@@ -45,13 +45,7 @@ NeuroSat VQ/
 - Python 3.8+
 - CUDA-capable GPU (Recommended)
 
-### Setup
 
-1.  **Clone the Repository**
-    ```bash
-    git clone <repo_url>
-    cd NeuroSat VQ
-    ```
 
 2.  **Install Dependencies**
     ```bash

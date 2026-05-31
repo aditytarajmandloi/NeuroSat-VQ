@@ -1,9 +1,9 @@
 # NeuroSat VQ
 
 <div align="center">
-  <video src="https://github.com/aditytarajmandloi/NeuroSat-VQ/raw/main/data/demo.mp4" controls="controls" style="max-width: 100%; border-radius: 8px;"></video>
-  <br/>
-  <em>Interactive Web Interface Demonstration</em>
+  <a href="https://drive.google.com/file/d/1hfj3JYd76GQdD-xp3qls2NUMG5RGXXGi/view?usp=sharing">
+    <strong>▶️ Watch the Interactive Web Interface Demonstration</strong>
+  </a>
 </div>
 
 **NeuroSat VQ** is an advanced satellite image compression framework utilizing a Vector Quantized Variational Autoencoder (VQ-VAE). It achieves high compression ratios for geospatial data while maintaining superior perceptual and structural quality.

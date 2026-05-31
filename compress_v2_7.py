@@ -41,11 +41,16 @@ def main(args):
         geo_profile = src.profile
         img_data = src.read().transpose(1, 2, 0) # H,W,C
     
-   # Handle Alpha - FORCE DROP to save RAM
+   # Handle Channels (Alpha and Grayscale)
     alpha_rle = None
     if img_data.shape[2] == 4:
-        print("⚠️ Dropping Alpha Channel to prevent Memory Crash.")
+        print("[WARNING] Dropping Alpha Channel to prevent Memory Crash.")
         img_rgb = img_data[:, :, :3] # Take only R, G, B
+    elif len(img_data.shape) == 2 or img_data.shape[2] == 1:
+        print("[WARNING] Grayscale image detected. Converting to RGB.")
+        if len(img_data.shape) == 2:
+            img_data = np.expand_dims(img_data, axis=2)
+        img_rgb = np.repeat(img_data, 3, axis=2)
     else:
         img_rgb = img_data
         
@@ -86,8 +91,8 @@ def main(args):
     orig_size = os.path.getsize(args.input)
     comp_size = os.path.getsize(args.output)
     ratio = orig_size / comp_size
-    print(f"✅ Saved: {args.output}")
-    print(f"📉 Compression Ratio: {ratio:.2f}x")
+    print(f"[SUCCESS] Saved: {args.output}")
+    print(f"[STATS] Compression Ratio: {ratio:.2f}x")
 
 if __name__ == "__main__":
     p = argparse.ArgumentParser()

@@ -101,7 +101,7 @@ def main(args):
     with rasterio.open(args.output, "w", **prof) as dst:
         dst.write(to_save)
         
-    print(f"✅ Done: {args.output}")
+    print(f"[SUCCESS] Done: {args.output}")
 
 if __name__ == "__main__":
     p = argparse.ArgumentParser()

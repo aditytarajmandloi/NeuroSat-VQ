@@ -101,7 +101,8 @@ def evaluate(orig_path, recon_path):
 
     print("\nSaving heatmap -> recon_error_heatmap.png")
     heat = error_heatmap(orig, recon)
-    Image.fromarray(heat).save("recon_error_heatmap.png")
+    heat_rgb = heat[:, :, ::-1]  # Convert BGR (OpenCV) to RGB (PIL)
+    Image.fromarray(heat_rgb).save("recon_error_heatmap.png")
     print("Done.")
 
 

@@ -4,18 +4,29 @@ env/
 .env
 
 # Data and Results
-data/
+data/*
+!data/demo.mp4
+!data/train_split_frozen.json
 results/
+health/
+health_check.png
+recon_error_heatmap.png
 
+# Models
+models_v2_7/*.pth
+!models_v2_7/v2_7_finalmodel.pth
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
 
 # Python compiled files
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-
-# Models (Optional: Uncomment if you want to exclude trained models)
-# models_v2_7/
+*.bin
+*.pkl
 
 # OS generated files
 .DS_Store

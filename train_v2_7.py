@@ -37,7 +37,7 @@ def psnr(a, b):
 def safe_health_check(model, device, epoch):
     img_path = "health_check.png"
     if not os.path.exists(img_path):
-        print("⚠️ No health image.")
+        print("[WARNING] No health image.")
         return
 
     img = np.array(Image.open(img_path))/255

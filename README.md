@@ -1,5 +1,11 @@
 # NeuroSat VQ
 
+<div align="center">
+  <video src="data/demo.mp4" controls="controls" style="max-width: 100%; border-radius: 8px;"></video>
+  <br/>
+  <em>Interactive Web Interface Demonstration</em>
+</div>
+
 **NeuroSat VQ** is an advanced satellite image compression framework utilizing a Vector Quantized Variational Autoencoder (VQ-VAE). It achieves high compression ratios for geospatial data while maintaining superior perceptual and structural quality.
 
 The system is designed to handle massive satellite imagery (e.g., GeoTIFFs) by processing them in overlapping tiles, compressing them into a compact latent representation using learned vector quantization, and reconstructing them with seamless boundary handling.
@@ -123,6 +129,22 @@ Quantitatively and qualitatively evaluate the reconstruction.
 **Command:**
 ```bash
 python verify_reconstruction.py --orig original.tif --recon reconstructed.tif
+```
+
+### 5. Running the Web Application
+
+To run the interactive web interface, you need to start both the backend API and the frontend development server.
+
+**Start the Backend (from the project root):**
+```powershell
+.\venv\python.exe app.py
+```
+*(Note: Use `.\venv\python.exe` directly. Do not use `.\venv\Scripts\python.exe` or `python` globally to prevent path resolution errors on Windows.)*
+
+**Start the Frontend (from the `frontend` directory):**
+```bash
+cd frontend
+npm run dev
 ```
 
 ---

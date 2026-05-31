@@ -1,7 +1,7 @@
 # NeuroSat VQ
 
 <div align="center">
-  <video src="data/demo.mp4" controls="controls" style="max-width: 100%; border-radius: 8px;"></video>
+  <video src="https://github.com/aditytarajmandloi/NeuroSat-VQ/raw/main/data/demo.mp4" controls="controls" style="max-width: 100%; border-radius: 8px;"></video>
   <br/>
   <em>Interactive Web Interface Demonstration</em>
 </div>
